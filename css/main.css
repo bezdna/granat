@@ -100,9 +100,9 @@ textarea {
     min-width: 600px;
    }
 .wrapper {
-    max-width: 980px;
+    max-width: 1150px;
     margin: auto;
-    padding: 0 10px;
+    padding: 0 6px;
 }
 header {
     background: url(../img/bg_header_1.jpg) center 0 no-repeat;
@@ -360,9 +360,10 @@ header a:hover .icon:before {
     content: '';
 }
 .catalog-colection li{
-    display: inline-block;
+    display: block;
+    float: left;
     width: 25%;
-    padding: 1px 1px 1px 0;
+    padding: 0px 1px 1px 0;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -370,21 +371,32 @@ header a:hover .icon:before {
     display: inline-block;
     width: 48%;
     margin: 1%;
+    padding: 0;
+    position: relative;
 }
 .catalog-colection li:nth-child(2n){
     text-align: right;
 }
-.catalog-colection li a{
+.catalog-colection li a {
+    overflow: hidden;
+    position: relative;
+}
+.catalog-colection li a,
+.catalog-colection li a h2,
+.catalog-colection li a h3{
     display: block;
     color: #fff;
     text-shadow: 1px 1px 1px  rgba(0,0,0,0.3);
     transition: .3s all ease;
 }
-.catalog-colection li a:hover {
+.catalog-colection li a:hover,
+.catalog-colection li a:hover h2,
+.catalog-colection li a:hover h3  {
     color: #c21c2e;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
 }
 .catalog-colection li img{
+    width: 100%;
     max-width: 100%;
 }
 .colection-title {
@@ -399,19 +411,28 @@ header a:hover .icon:before {
     text-transform: uppercase;
     
 }
-.catalog-colection li a h2{
+h2{
     font-family: "Roboto-Thin";
     font-size: 45px;
     font-weight: normal;
     padding: 0;
-    margin: 0 0 0.2em;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #fff;
 }
-.catalog-colection li a h3{
+h3{
     font-family: "Roboto-Bold";
     font-size: 16px;
+    line-height: 1;
     font-weight: normal;
+    text-transform: uppercase;
+    color: #fff;
     padding: 0;
     margin: 0;
+}
+.catalog-colection li a h2{
+    margin: 0 0 0.1em;
 }
 .link-more {
     display: block;
@@ -424,15 +445,97 @@ header a:hover .icon:before {
     text-transform: uppercase;
     text-decoration: none;
 }
+.product {
+    clear: both;
+    color: #fff;
+}
+.product-slider,
+.product-images_slide {
+    width: 46%;
+    float: left;
+    overflow: hidden;
+}
+.product-slider ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 1000%;
+}
+.product-slider ul li{
+    float: left;
+    width: 10%;
+}
+.product-slider li img{
+    width: 100%;
+    max-width: 100%;
+}
+.product-slider_big {
+    width: auto;
+    margin: 0 -6px 20px;
+    max-height: 700px;
+}
+.produc-info {
+    width: 52%;
+    float: right;
+}
+.produc-info .size {
+    font-family: "Roboto-Bold";
+}
+.produc-info .price {
+    font-family: "OpenSans", sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+.produc-info .price span{
+    font-family: "OpenSans", sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+}
+.produc-info .info{
+    font-family: "OpenSans", sans-serif;
+    font-size: 14px;
+    line-height: 1.6em;
+}
+.produc-info .button.cart{
+    font-family: "Roboto-Light", sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 100;
+    display: inline-block;
+    float: none;
+    background-color: #282828;
+    background-color: rgba(0,0,0, 0.6);
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 10px 10px 10px;
+    margin-top: 10px;
+    transition: .3s all ease;
+}
+.produc-info .icon-cart:before{
+    font-family: 'icomoon';
+    font-size: 18px;
+}
+.produc-info .button.cart:hover {
+    background-color: #c21c2e;
+    background-color: rgba(194,28,46, 0.4);
+}
+.product-images {
+    clear: both;
+    padding-top: 20px;
+}
+.product-images_slide {
+    padding-top: 0;
+}
 .contact {
     margin-bottom: 20px;
     overflow: hidden;
+    color: #fff;
 }
 .contact h2 {
     padding-top: 1em;
     margin: 0 0 1.5em;
     text-align: center;
-    color: #fff;
     font-family: "Roboto-Thin";
     font-size: 36px;
     text-transform: uppercase;
@@ -501,7 +604,6 @@ header a:hover .icon:before {
     font-family: "OpenSans", sans-serif;
     font-size: 14px;
     vertical-align: top;
-    color: #fff;
     margin-top: 0;
     padding-bottom: 0.4em;
 }
