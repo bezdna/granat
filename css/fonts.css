@@ -187,6 +187,9 @@
 .icon-linkedin:before {
 	content: "\e62d";
 }
+.icon-location:before {
+	content: "\e636";
+}
 .icon-bag:before {
 	content: "\e621";
 }
@@ -225,4 +228,10 @@
 }
 .icon-cc-by:before {
 	content: "\e635";
+}
+.icon-arrow-left-small:before {
+	content: "\e637";
+}
+.icon-arrow-right-small:before {
+	content: "\e638";
 }
